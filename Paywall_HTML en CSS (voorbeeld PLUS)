@@ -1,0 +1,331 @@
+<div class="bcContentDialogue" id="bc_trends_paywall_NL_V1">
+    <div class="datawall-wrapper popup">
+        <div class="header">
+            <p class="title">Dit verhaal komt uit Plus Magazine&nbsp;</p>
+            <p class="subtitle">Verder lezen? Krijg Plus Magazine de komende drie maanden&nbsp;
+                <br />
+                <strong>thuisbezorgd voor slechts 10 euro</strong>.&nbsp;&nbsp;
+            </p>
+            <!-- COVER BLOK: matcht met .cover_makr uit je CSS -->
+            <picture class="cover_makr">
+                <img alt="Cover Plus Magazine" decoding="async" loading="lazy" src="https://makr.roularta.be/makr-resize-cover/getCover.action?editionCode=ON" />
+            </picture>
+            <!-- /COVER BLOK -->
+            <p class="features">
+                <strong class="USP-check">✓</strong>&nbsp;Toegang tot alle exclusieve verhalen op PlusOnline&nbsp;
+            </p>
+            <p class="features">
+                <strong class="USP-check">✓</strong> Eerdere edities digitaal teruglezen in de Mijn&nbsp;Magazines-app
+            </p>
+            <p class="features">
+                <strong class="USP-check">✓</strong> Lees 
+                <strong>digitaal </strong>&eacute;n ontvang 
+                <strong>Plus Magazine thuis op de mat</strong>
+            </p>
+        </div>
+        <div class="register">
+            <form action="https://www.mijnmagazines.nl/promo/7YETC" method="get">
+                <p>
+                    <input class="returnUrl" name="returnUrl" type="hidden" value="" />
+                    <input id="transaction_guid" name="transaction_guid" type="hidden" value="" />
+                    <input name="authCode" type="hidden" value="ON" />
+                    <input name="actionCode" type="hidden" value="7YETC" />
+                    <input name="utm_source" type="hidden" value="brandsite" />
+                    <input name="utm_medium" type="hidden" value="blueconic_paywall" />
+                    <input name="utm_campaign" type="hidden" value="ON_dm_paywall_High_access" />
+                    <input name="utm_term" type="hidden" value="on" />
+                    <input name="utm_content" type="hidden" value="PositieTest_Toaster" />
+                    <button class="button" id="ON_paywall_High-access" onclick="bcSubclick()" type="submit">
+                        <img alt="Roularta Media Group" class="icon-rmg" data-bc-filename="icon-rmg-white.png" src="https://roularta.blueconic.net/rest/v2/dialogues/files/de0062e2-4d03-4353-848f-b9f87228a931/icon-rmg-white.png" />Start direct met lezen &rarr;
+                    </button>
+                </p>
+            </form>
+            <div class="login">
+                <!-- MODIFIED THIS PART: Removed nested spans with problematic inline styles -->
+                <span class="login-text">Al abonnee?</span>
+                <a class="login-link" data-google-interstitial="false" href="https://sso.roularta.nl/login" id="click_paywall_FOM" onclick="bcLogonclick()" role="button">Log hier in en lees verder</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<----- CSS ----->
+
+html, body {
+  /* overflow: hidden;
+     user-select: none; */
+}
+
+/* body.locked {
+  overflow: hidden;
+} */
+
+/* Laat ALLE bol.com widgets altijd door */
+[id^="PLbol_"],
+[id^="Bbol_"],
+[data-test^="PLbol_"],
+[data-test^="Bbol_"],
+.media--type-script,
+.media--type-script * {
+  display: revert !important;
+  visibility: revert !important;
+  padding-bottom: 10px;
+}
+
+/* Loader mag verborgen blijven */
+[id^="Bbol_"][data-test$="_loader"] {
+  display: none !important;
+}
+
+/* Body cleanup */
+.field.field--name-body.field--label-hidden.field__item p,
+.field.field--name-body.field--label-hidden.field__item ul,
+.field.field--name-body.field--label-hidden.field__item ol,
+.field.field--name-body.field--label-hidden.field__item il,
+.field.field--name-body.field--label-hidden.field__item strong,
+.field.field--name-body.field--label-hidden.field__item h1,
+.field.field--name-body.field--label-hidden.field__item h2 {
+  display: none;
+}
+
+.field.field--name-body.field--label-hidden.field__item p:nth-child(1) {
+  display: none !important;
+}
+
+/* Popup wrapper */
+#bc_trends_paywall_NL_V1 .datawall-wrapper.popup {
+  color: black;
+  border: solid 5px #5EBABF;
+  background-color: #fbfaf6;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+#bc_trends_paywall_NL_V1 .register .button.info-link {
+  background-color: #000000;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  color: #FFFFFE;
+  padding: 8px 0;
+  margin-bottom: 10px;
+}
+
+#bc_trends_paywall_NL_V1 .datawall-wrapper {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header */
+#bc_trends_paywall_NL_V1 .header {
+  text-align: center;
+}
+
+#bc_trends_paywall_NL_V1 .header .title {
+  color: #000000;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.cover_makr img {
+  display:flex;      /* <- onzin voor een <img> */
+  max-width:150px;   /* <- dwingt de foto smal */
+}
+
+.cover_makr img {
+  display: block;
+  width: 27%;
+  height: auto;
+  object-fit: cover;
+}
+.cover_makr {
+  display: inline-block;    /* wrapper wordt net zo groot als de img */
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 0;           /* voorkomt witte randjes door inline spacing */
+}
+
+.cover_makr img {
+  display: block;
+  width: auto;
+  height: 200px;
+  max-width: 100%;          /* schaalt terug als nodig */
+}
+/* Teksten */
+#bc_trends_paywall_NL_V1 .header .features {
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin: 10px 0 15px;
+}
+
+#bc_trends_paywall_NL_V1 .header .subtitle {
+  color: black;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 10px;
+}
+
+#bc_trends_paywall_NL_V1 .header .subtitle strong {
+  color: #ED1A3B;
+}
+
+/* Login */
+#bc_trends_paywall_NL_V1 .login {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+#bc_trends_paywall_NL_V1 .login-text {
+  color: #000000;
+  font-weight: bold;
+  font-family: "Aeonik", sans-serif;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+#bc_trends_paywall_NL_V1 .login-link {
+  color: #ED1A3B;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#bc_trends_paywall_NL_V1 .login .login-link {
+  color: #ED1A3B;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Layout */
+#bc_trends_paywall_NL_V1 .summary,
+#bc_trends_paywall_NL_V1 .register,
+#bc_trends_paywall_NL_V1 .login {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 8px;
+}
+
+#bc_trends_paywall_NL_V1 .summary {
+  margin: 30px auto;
+}
+
+#bc_trends_paywall_NL_V1 .summary .check {
+  color: #5cb4ab;
+  font-weight: bold;
+}
+
+#bc_trends_paywall_NL_V1 .summary p {
+  color: black;
+  font-family: "Aeonik","Publica Slab","Helvetica","Arial",sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Register form */
+#bc_trends_paywall_NL_V1 .register input {
+  width: 100%;
+  height: 45px;
+  padding: 0 14px;
+  margin: 10px 0px;
+}
+
+#bc_trends_paywall_NL_V1 .register .button {
+  width: 100%;
+  display: inline-block;
+  background-color: #ED1A3B;
+  font-family: "Ciutadella W04", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+  color: #FFFFFE;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  padding: 14px;
+  margin: 10px 0 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#bc_trends_paywall_NL_V1 .register .button:hover {
+  background-color: #870c1e;
+}
+
+#bc_trends_paywall_NL_V1 .register .icon-rmg {
+  margin: 0 15px 0 0;
+  vertical-align: middle;
+}
+
+.USP-check {
+  color: #ED1A3B;
+}
+
+/* Cleanup onder content */
+#bc-below-para-1 ~ * {
+  display: none !important;
+}
+
+/* Media query mobiel */
+@media (max-width: 768px) {
+  #bc_knack_2207_banner2_block {
+    width: 98vw;
+    max-width: 100%;
+    margin: 16px auto;
+    padding: 0;
+    border: solid 1px #dbdbdb;
+  }
+
+  #bc_knack_2207_banner2_content {
+    flex-direction: column;
+    padding: 20px 12px;
+    min-height: unset;
+    box-sizing: border-box;
+  }
+
+  #bc_knack_2207_banner2_content .content {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #bc_knack_2207_banner2_content .content form {
+    width: 100%;
+    max-width: 340px;
+    margin: 14px auto 10px auto;
+    box-sizing: border-box;
+  }
+
+  #bc_knack_2207_banner2_content .content form input,
+  #bc_knack_2207_banner2_content .content form button {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  #bc_knack_2207_banner2_content .content form button {
+    margin-top: 8px;
+  }
+
+  .datawall-login {
+    font-size: 15px;
+    padding: 10px 5px;
+    margin-top: 10px;
+    text-align: center;
+    word-break: break-word;
+  }
+}
+
