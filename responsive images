@@ -1,0 +1,21 @@
+<div class="my-banner">
+  <a href="https://voorbeeld.nl/">
+    <picture>
+      <!-- Mobiele afbeelding (tot 767px) -->
+      <source 
+        media="(max-width: 767px)" 
+        srcset="https://via.placeholder.com/560x320.png?text=Mobiel+beeld">
+
+      <!-- Desktop afbeelding (768px en groter) -->
+      <source 
+        media="(min-width: 768px)" 
+        srcset="https://via.placeholder.com/1000x300.png?text=Desktop+beeld">
+
+      <!-- Fallback voor browsers zonder <picture>-support -->
+      <img 
+        src="https://via.placeholder.com/1000x300.png?text=Desktop+beeld" 
+        alt="Promotie banner" 
+        style="width: 100%;">
+    </picture>
+  </a>
+</div>
